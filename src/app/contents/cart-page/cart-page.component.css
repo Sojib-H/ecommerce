@@ -1,0 +1,17 @@
+.SummaryContent{
+    border: 1px solid #dddddd;
+}
+.summary {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.summary li{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+
+img{
+    cursor: pointer;
+}

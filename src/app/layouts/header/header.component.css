@@ -1,0 +1,12 @@
+.serchResult .list-group{
+    position: absolute;
+    z-index: 10;
+    width: 200px;
+}
+
+.list-group-item{
+    cursor: pointer;
+}
+a{
+    cursor: pointer;
+}

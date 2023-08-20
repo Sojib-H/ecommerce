@@ -1,0 +1,30 @@
+<div class="container checkout my-3">
+    <h2 class="text-center">Checkout</h2>
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <h3>Add Shipping Address</h3>
+            <form #orderData="ngForm" (ngSubmit)="orderNow(orderData.value)">
+                <div class="form-group">
+                    <label for="email">Enter email address</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" ngModel>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="contact">Enter contact details</label>
+                    <input type="text" class="form-control" name="contact" id="contact" placeholder="Enter contact" maxlength="11" ngModel>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="address">Enter your address</label>
+                    <textarea rows="3" class="form-control" name="address" id="address" placeholder="Enter address" ngModel></textarea>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-primary form-control">Order Now</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-6 amount">
+            <h3>Total Amount : {{totalPrice}}</h3>
+            <h4>Payment Method : <strong>Cash On Delivery</strong></h4>
+        </div>
+    </div>
+</div>

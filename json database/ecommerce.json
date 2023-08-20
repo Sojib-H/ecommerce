@@ -1,0 +1,54 @@
+{
+  "seller": [],
+  "products": [
+    {
+      "name": "iphone 12",
+      "price": "100000",
+      "color": "black",
+      "category": "Mobile Phone",
+      "description": "this is an android phone1",
+      "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-2.jpg",
+      "id": 1
+    },
+    {
+      "name": "Chair",
+      "price": "800",
+      "color": "primary",
+      "category": "furniture",
+      "description": "this is  a furniture",
+      "image": "https://www.oakworld.co.uk/wp-content/uploads/2018/09/Alston-Oak-Dining-Chair-64334-64283.jpg",
+      "id": 3
+    },
+    {
+      "name": "Bed",
+      "price": "20000",
+      "color": "primary",
+      "category": "furniture",
+      "description": "this is  a furniture",
+      "image": "https://hatil.com/sites/default/files/styles/hatil_product_list_crop/public/Obsession-151%20.jpg?itok=wvE_20q0",
+      "id": 4
+    },
+    {
+      "name": "Coconut Oil",
+      "price": "120",
+      "color": "Mixed",
+      "category": "Beauty Product",
+      "description": "This is a beauty product",
+      "image": "https://moslawala.com/wp-content/uploads/2019/10/cold-pressed-pure-edible-coconut-oil-500x500.jpg",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "name": "sojib",
+      "email": "sojib@gmail.com",
+      "phone": "01232123131",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "acceptTerms": true,
+      "id": 1
+    }
+  ],
+  "cart": [],
+  "orders": []
+}

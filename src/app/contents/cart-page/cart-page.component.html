@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <h3 class="my-3">My Cart</h3>
+        <div class="col-md-8">
+            <div *ngIf="cartLength == 0">
+                <p>Cart is empty</p>
+            </div>
+            <table *ngIf="cartLength !=0" class="table table-bordered">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col">Image</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center" *ngFor="let item of cartData">
+                        <td>
+                            <img routerLink="/details/{{item.productId}}" src="{{item.image}}" alt="product_image" height="100" width="100">
+                        </td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.price}}৳</td>
+                        <td>{{item.quantity}}</td>
+                        <td><button class="btn btn-danger" (click)="removeToCart(item.id)"><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div *ngIf="cartLength !=0" class="col-md-4 SummaryContent">
+            <h4 class="text-center my-3">Price Summary</h4>
+            <ul class="summary">
+                <li>
+                    <span>Regular Price</span><span>{{priceSummary.price}}</span>
+                </li>
+                <li>
+                    <span>Tax</span><span>{{priceSummary.tax}}</span>
+                </li>
+                <li>
+                    <span>Delivery</span><span>{{priceSummary.delivery}}</span>
+                </li>
+                <li>
+                    <span>Discount</span><span>{{priceSummary.discount}}</span>
+                </li>
+                <li>
+                    <span>
+                        <h4>Total</h4>
+                    </span><span>
+                        <h4>{{priceSummary.total}}</h4>
+                    </span>
+                </li>
+                <button routerLink="/checkout" class="btn btn-primary">Checkout</button>
+            </ul>
+        </div>
+    </div>
+</div>

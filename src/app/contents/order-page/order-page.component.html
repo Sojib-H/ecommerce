@@ -1,0 +1,31 @@
+<div class="myOrders container">
+  <div class="row">
+    <h3 class="text-center my-4">My Orders</h3>
+    <div class="col-md-12">
+      <div *ngIf="orderLength == 0">
+        <p>No order is placed</p>
+      </div>
+      <table *ngIf="orderLength != 0" class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th scope="col">Order</th>
+            <th scope="col">Order Id</th>
+            <th scope="col">Price</th>
+            <th scope="col">Status</th>
+            <th scope="col">Cancel Order</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of orderData">
+            <th><img src="../assets/images/cart.png" width="50" height="50"></th>
+            <td>#{{item.id}}</td>
+            <td>{{item.totalPrice}}</td>
+            <td>In Process</td>
+            <td><button class="btn btn-danger" (click)="cancerOrder(item.id)"><i class="fa fa-times"
+                  aria-hidden="true"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
